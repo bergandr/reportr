@@ -1,8 +1,7 @@
 import zmq
 import time
 
-zip_path_shared = "/Users/andrewberger/cs361-samples/report_zips"
-samples = [{"directory": "reports", "zip_name" : "testing.zip"}]
+samples = [{"directory": "reports", "zip_name": "testing.zip"}]
 
 
 def main():
@@ -20,9 +19,6 @@ def main():
         # get the reply from the server
         reply = socket.recv_json()
         print("Full reply:", reply)
-
-        # for file in reply:
-        #     print(reply[file], "", file)
 
         time.sleep(5)  # so that we can see each request more clearly on the video demo
 
